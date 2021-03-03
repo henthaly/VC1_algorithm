@@ -23,11 +23,6 @@ My_back=canvas.create_image(200,350,image=background)
 #create the  wall
 X=20
 Y=50
-Cell_wall=1
-Cell_nothing=0
-Cell_killer=8
-Cell_diamond=4
-player_score=0
 my_array=[[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
           [1,"k",0,0,0,0,0,0,0,0,0,0,0,0,0,1],
           [1,0,1,0,8,1,4,0,0,0,1,8,1,0,0,1],
@@ -66,14 +61,7 @@ Player=canvas.create_image(60,90,image=bg)
 
 # Player can move left,right,up,dow
 
-def right():
-    global my_array
-    player= position()
-    Row=player[0]
-    Col=player[1]
-    right=my_array[Row][Col+1]
-    result=canMove(right)
-    return result
+
 player_X=0
 player_Y=0
 def move_player():
